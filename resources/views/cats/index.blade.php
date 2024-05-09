@@ -24,7 +24,7 @@
                 <td>
                     <img src="{{ $cat->image_url }}" alt="{{ $cat->name }}" width="100">
                 </td>
-                <td>{{$cat->name}}</td>
+                <td><a href="{{ route('cats.show', $cat->id) }}"> {{ $cat->name }}</a></td>
                 <td>{{$cat->breed}}</td>
                 <td>{{$cat->age}}</td>
                 <td>{{$cat->life_expectancy}}</td>
