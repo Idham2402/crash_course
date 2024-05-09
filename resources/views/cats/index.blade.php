@@ -28,8 +28,8 @@
                     <img src="{{ $cat->image_url }}" alt="{{ $cat->name }}" width="100">
                 </td>
                 <td>
-            
-                    <form action="{{route('cats.destroy', $cat->id) }}" method="POST">
+                    <a href="{{ route('cats.edit', $cat->id) }}">Edit</a>
+                    <form action="{{ route('cats.destroy', $cat->id) }}" method="POST">
                         @csrf 
                         @method('DELETE')
                         <button type="submit">Delete</button>
