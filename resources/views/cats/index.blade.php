@@ -7,6 +7,7 @@
 </head>
 <body>
 <h1>No Cat No Life</h1>
+<a href="{{ route('cats.create') }}">Add New Meow?</a>
 <table border ="1">
     <thead>
         <tr>
@@ -20,13 +21,14 @@
     <tbody>
         @forelse ($cats as $cat)
             <tr>
+                <td>
+                    <img src="{{ $cat->image_url }}" alt="{{ $cat->name }}" width="100">
+                </td>
                 <td>{{$cat->name}}</td>
                 <td>{{$cat->breed}}</td>
                 <td>{{$cat->age}}</td>
                 <td>{{$cat->life_expectancy}}</td>
-                <td>
-                    <img src="{{ $cat->image_url }}" alt="{{ $cat->name }}" width="100">
-                </td>
+                
                 <td>
                     <a href="{{ route('cats.edit', $cat->id) }}">Edit</a>
                     <form action="{{ route('cats.destroy', $cat->id) }}" method="POST">
