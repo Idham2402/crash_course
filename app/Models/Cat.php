@@ -13,7 +13,7 @@ class Cat extends Model
         'name',
         'breed',
         'age',
-        'life_expentacy',
+        'life_expectancy',
         'image_url',
     ];
 }
